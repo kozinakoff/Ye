@@ -16,6 +16,9 @@
 		80B71017272574B400C7FF4D /* YeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B71016272574B400C7FF4D /* YeTests.swift */; };
 		80B71021272574B400C7FF4D /* YeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B71020272574B400C7FF4D /* YeUITests.swift */; };
 		80B71023272574B400C7FF4D /* YeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B71022272574B400C7FF4D /* YeUITestsLaunchTests.swift */; };
+		80B7103027258D4A00C7FF4D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7102F27258D4A00C7FF4D /* NetworkManager.swift */; };
+		80B710322725918600C7FF4D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B710312725918600C7FF4D /* Quote.swift */; };
+		80B71034272597A700C7FF4D /* YeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B71033272597A700C7FF4D /* YeError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		80B7101C272574B400C7FF4D /* YeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B71020272574B400C7FF4D /* YeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeUITests.swift; sourceTree = "<group>"; };
 		80B71022272574B400C7FF4D /* YeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		80B7102F27258D4A00C7FF4D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		80B710312725918600C7FF4D /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		80B71033272597A700C7FF4D /* YeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,11 @@
 		80B70FFE272574B000C7FF4D /* Ye */ = {
 			isa = PBXGroup;
 			children = (
+				80B710372725A87A00C7FF4D /* View */,
+				80B710362725A86A00C7FF4D /* Manager */,
+				80B710352725A85100C7FF4D /* Model */,
 				80B70FFF272574B000C7FF4D /* AppDelegate.swift */,
 				80B71001272574B000C7FF4D /* SceneDelegate.swift */,
-				80B71003272574B000C7FF4D /* ViewController.swift */,
 				80B71005272574B000C7FF4D /* Main.storyboard */,
 				80B71008272574B400C7FF4D /* Assets.xcassets */,
 				80B7100A272574B400C7FF4D /* LaunchScreen.storyboard */,
@@ -125,6 +133,31 @@
 				80B71022272574B400C7FF4D /* YeUITestsLaunchTests.swift */,
 			);
 			path = YeUITests;
+			sourceTree = "<group>";
+		};
+		80B710352725A85100C7FF4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80B71033272597A700C7FF4D /* YeError.swift */,
+				80B710312725918600C7FF4D /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		80B710362725A86A00C7FF4D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				80B7102F27258D4A00C7FF4D /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		80B710372725A87A00C7FF4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80B71003272574B000C7FF4D /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B7103027258D4A00C7FF4D /* NetworkManager.swift in Sources */,
 				80B71004272574B000C7FF4D /* ViewController.swift in Sources */,
+				80B71034272597A700C7FF4D /* YeError.swift in Sources */,
 				80B71000272574B000C7FF4D /* AppDelegate.swift in Sources */,
+				80B710322725918600C7FF4D /* Quote.swift in Sources */,
 				80B71002272574B000C7FF4D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,7 +480,6 @@
 				INFOPLIST_FILE = Ye/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,7 +491,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -472,7 +507,6 @@
 				INFOPLIST_FILE = Ye/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,7 +518,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
